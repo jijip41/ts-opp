@@ -17,6 +17,11 @@ class App extends ButtonEvent {
     circleButton?.addEventListener("click", () => {
       this.add(appRoot, "circle");
     });
+
+    const undoButton = document.querySelector(".button__undo");
+    undoButton?.addEventListener("click", () => {
+      this.undo(appRoot);
+    });
   }
 }
 new App(document.querySelector(".document")! as HTMLElement);
